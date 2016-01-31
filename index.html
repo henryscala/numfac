@@ -2,11 +2,15 @@
 
 <html>
   <head>
-    <title>A Minimalist App</title>
+  <style type="text/css">
+    body { margin: 0; padding: 0; }
+    #stage { position: absolute; width: 1024; height: 768; }
+  </style>
+  <title>number factory</title>
   </head>
 
   <body>
-    <canvas id="canvas"></canvas>
+    <canvas id="stage" width="1024", height="768"></canvas>
 
     <script type="application/dart" src="main.dart"></script>
     <script src="packages/browser/dart.js"></script>
