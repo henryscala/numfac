@@ -11,6 +11,50 @@ int TOP_MARGIN = 0; //it is calculated
 
 stagexl.Stage gStage;
 
+class Item{
+
+}
+
+class Operator extends Item{
+  String item;
+  Operator(i){
+    item = i;
+  }
+  String toString(){
+    return item; 
+  }
+}
+
+class Operand extends Item{
+  int item;
+  Operand(i){
+    item = i; 
+  }
+  String toString(){
+    return "${item}"; 
+  }
+}
+
+stagexl.DisplayObject operatorObject(String op){
+  stagexl.TextField t = new stagexl.TextField(op);
+  t.userData = new Operator(op);
+  return t; 
+}
+
+stagexl.DisplayObject operandObject(int op){
+  var opt = new Operand(op);
+  stagexl.TextField t = new stagexl.TextField(op.toString());
+  t.userData = opt; 
+  return t; 
+}
+
+
+
+
+
+stagexl.Sprite stackSprite(List<Item> stack){
+  //TODO  
+}
 
 stagexl.DisplayObject backgroundObject(  ){
   stagexl.Shape shape = new stagexl.Shape(); 
