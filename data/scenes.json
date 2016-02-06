@@ -1,0 +1,52 @@
+
+[
+	{
+
+		"initStacks" : [
+			[1,2]
+		],
+
+		"matchStacks" : [
+			[3]
+		],
+
+		"initToolCellLines" : [
+			[
+        {
+          "kind":1, 
+          "value":1,
+          "num":1
+        }	
+			]		
+		],
+
+		"workCellLines" : [
+			1
+		]
+	},
+	
+	{
+
+		"initStacks" : [
+			[2,3]
+		],
+
+		"matchStacks" : [
+			[6]
+		],
+
+		"initToolCellLines" : [
+			[
+        {
+          "kind":1, 
+          "value":3,
+          "num":1
+        }
+      ]  			
+		],
+
+		"workCellLines" : [
+			1
+		]
+	}
+]
