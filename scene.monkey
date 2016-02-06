@@ -71,13 +71,12 @@ Class Scene
     
     Local j% = 0 
     
-    Print "workCellLines.Length " + workCellLines.Length  
+      
     For i=0 Until workCellLines.Length 
       cellLine = workCellLines[i] 
       row = WORK_LINE_ROWS[j] 
       col = NUM_COLS / 2 - cellLine.items.Length / 2 
-      Print "row " + row 
-      Print "col "+col 
+      
       cellLine.col = col 
       cellLine.row = row 
       cellLine.RegisterCommands
@@ -166,7 +165,7 @@ Class Scene
                     Continue 
                 Else 
                     state = SCENE_STATE_NOTMATCHED    'it is an error case, shall not happen
-                    Print "SCENE_STATE_NOTMATCHED error happened" 
+                    'Print "SCENE_STATE_NOTMATCHED error happened" 
                     Return 
                 End 
             End 
@@ -395,7 +394,7 @@ Function LoadScenes:Scene[] ()
     jsonParser = New JsonParser(strScenes) 
     jsonScenesArray =  JsonArray( jsonParser.ParseValue ) 
     
-    Print "scene Number " + jsonScenesArray.Length
+    
     sceneArray=sceneArray.Resize(jsonScenesArray.Length)
     For i = 0 Until jsonScenesArray.Length
     scene = New Scene

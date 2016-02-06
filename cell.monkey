@@ -206,7 +206,7 @@ Function GetCellLine:CellLine(col:Int,row:Int,scene:Scene)
 		If row = cellLine.row Then Return cellLine 
 	Next 
 	
-	Print "GetCellLine reaching here means an error" 
+	
 	Return Null 
 End 
 
@@ -279,7 +279,7 @@ Function GetCloseCellLine:int(cellStack:CellStack, cellLineArray:CellLine[])
 			Return i 
 		End 
 	Next 
-	Print "GetCloseCellLine should not reach here"
+	
 	Return i 
 End 
 
