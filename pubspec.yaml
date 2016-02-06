@@ -1,5 +1,0 @@
-name: numfac
-version: 0.0.1
-description: number factory
-dependencies: 
-  stagexl: any 
