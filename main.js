@@ -2897,13 +2897,10 @@ c_Scene.prototype.p_ArrangeCoordinates=function(){
 		t_cellLine.p_RegisterCommands();
 	}
 	var t_j=0;
-	print("workCellLines.Length "+String(this.m_workCellLines.length));
 	for(t_i=0;t_i<this.m_workCellLines.length;t_i=t_i+1){
 		t_cellLine=this.m_workCellLines[t_i];
 		t_row=bb_config_WORK_LINE_ROWS[t_j];
 		t_col=10-((t_cellLine.m_items.length/2)|0);
-		print("row "+String(t_row));
-		print("col "+String(t_col));
 		t_cellLine.m_col=t_col;
 		t_cellLine.m_row=t_row;
 		t_cellLine.p_RegisterCommands();
@@ -2978,7 +2975,6 @@ c_Scene.prototype.p_Move=function(){
 				continue;
 			}else{
 				this.m_state=4;
-				print("SCENE_STATE_NOTMATCHED error happened");
 				return 0;
 			}
 		}
@@ -4466,7 +4462,6 @@ function bb_scene_LoadScenes(){
 	t_strScenes=bb_app_LoadString("scenes.json");
 	t_jsonParser=c_JsonParser.m_new.call(new c_JsonParser,t_strScenes);
 	t_jsonScenesArray=object_downcast((t_jsonParser.p_ParseValue()),c_JsonArray);
-	print("scene Number "+String(t_jsonScenesArray.p_Length()));
 	t_sceneArray=resize_object_array(t_sceneArray,t_jsonScenesArray.p_Length());
 	for(t_i=0;t_i<t_jsonScenesArray.p_Length();t_i=t_i+1){
 		t_scene=c_Scene.m_new.call(new c_Scene);
@@ -4631,7 +4626,6 @@ function bb_cell_GetCellLine(t_col,t_row,t_scene){
 			return t_cellLine;
 		}
 	}
-	print("GetCellLine reaching here means an error");
 	return null;
 }
 function bb_cell_IsWorkCellLine(t_col,t_row){
@@ -4788,7 +4782,6 @@ function bb_cell_GetCloseCellLine(t_cellStack,t_cellLineArray){
 			return t_i;
 		}
 	}
-	print("GetCloseCellLine should not reach here");
 	return t_i;
 }
 function bb_cell_GetCloseCellOper(t_cellStack,t_cellLineArray){
